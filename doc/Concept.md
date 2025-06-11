@@ -54,7 +54,15 @@
         Має опцію вбудованого Kubernetes. Проста активація, але споживає багато ресурсів.
         Працює на macOS та Windows.
 
+***Rancher Desktop***:
 
+        Open-source альтернатива Docker Desktop, GUI-додаток для розробників.
+        Підтримка Kubernetes (k3s), containerd/moby, nerdctl.
+        Кросплатформений. Має простий інтерфейс і налаштування.
 
+***Vagrant + kubeadm***:
 
-Rancher Desktop
+        Ручне розгортання Kubernetes на віртуальних машинах через Vagrant.
+        Гнучкий та схожий на продакшн, але складний у налаштуванні.
+
+        
