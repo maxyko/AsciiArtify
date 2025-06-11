@@ -72,17 +72,17 @@
 ### Характеристики
 #### Порівняльна таблиця характеристик
 
-|    | Tool              |     |     |
-| -- | ----------------- | --- | --- |
-| 1  | Minikube          |     |     |
-| 2  | Kind              |     |     |
-| 3  | k3s               |     |     |
-| 4  | k3d               |     |     |
-| 5  | k0s               |     |     |
-| 6  | MicroK8s          |     |     |
-| 7  | Docker Desktop    |     |     |
-| 8  | Rancher Desktop   |     |     |
-| 9  | Vagrant + kubeadm |     |
-| 10 | CRC               |     |     |
+|    | Tool              | OS                        |     |
+| -- | ----------------- | ------------------------- | --- |
+| 1  | Minikube          | Linux/macOS/Win           |     |
+| 2  | Kind              | Linux/macOS/Win           |     |
+| 3  | k3s               | Linux/macOS               |     |
+| 4  | k3d               | Linux/macOS/Win           |     |
+| 5  | k0s               | Linux/macOS/Win           |     |
+| 6  | MicroK8s          | Linux/macOS/Win           |     |
+| 7  | Docker Desktop    | Linux/macOS/Win           |     |
+| 8  | Rancher Desktop   | Linux/macOS/Win           |     |
+| 9  | Vagrant + kubeadm | Linux/macOS/Win           |     |
+| 10 | CRC               | Linux/macOS/Win           |     |
 
         
