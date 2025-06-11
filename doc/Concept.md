@@ -2,7 +2,6 @@
 Порівняльний аналіз інструментів для
 розгортання Kubernetes кластерів в локальному середовищі
 
-#Minikube  #Kind  #k3d  #MicroK8s  #k3s  #RancherDesktop
 
 ## Вступ:
 
@@ -69,6 +68,7 @@
 
         локальний кластер OpenShift (на базі Kubernetes) від Red Hat. Підходить для ознайомлення з OpenShift.
 
+
 ## Характеристики:
 ### Порівняльна таблиця характеристик
 
@@ -85,6 +85,7 @@
 |8 |Rancher Desktop  |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress)                |⭐⭐⭐⭐☆ |No                |
 |9 |Vagrant + kubeadm|Linux/macOS/Win|Yes/Yes/No                    |Yes             |N/A                         |⭐⭐☆☆☆   |Yes               |
 |10|CRC              |Linux/macOS/Win|Yes/No/No                     |Limited         |Yes(Web UI,Ingress)         |⭐⭐☆☆☆   |Limited(only eval)|
+
 
 ## Переваги та недоліки:
 
