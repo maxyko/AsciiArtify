@@ -34,9 +34,18 @@
         Легкий wrapper над k3s, для запуску lightweight Kubernetes в Docker-контейнерах.
         Дуже швидкий і легкий для локального девелопменту, multi-node підтримка.
         Підходить для розробки і тестування.
-       
-***MicroK8s*** — lightweight Kubernetes від Canonical з підтримкою додаткових модулів.
 
-***k3s*** - 
+***k0s***:
+
+        Zero-friction Kubernetes дистрибутив від Mirantis.
+        Все-в-одному, бінарник Kubernetes без зовнішніх залежностей.
+        Працює без root-доступу. Оптимізований для хмар і edge.
+
+
+***MicroK8s***:
+
+        lightweight Kubernetes від Canonical з підтримкою додаткових модулів.
+
+
 
 Rancher Desktop
