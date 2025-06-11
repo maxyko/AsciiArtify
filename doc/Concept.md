@@ -11,61 +11,61 @@
 
 Основні інструменти, які були розглянуті:
 
-***Minikube***:
+1. ***Minikube***:
 
         офіційний проєкт CNCF для локального запуску Kubernetes.
         Найбільш популярний інструмент для локального запуску повноцінного (однонодового) Kubernetes-кластера.
         Працює з VirtualBox, Docker, Hyper-V тощо. Має вбудовані аддони.
         Підходить для навчання, тестування та розробки.
 
-***Kind*** (Kubernetes IN Docker):
+2. ***Kind*** (Kubernetes IN Docker):
 
         дозволяє запускати Kubernetes-кластери у Docker контейнерах.
         Дуже легкий та швидкий. Часто використовується для CI/CD, автоматизованих тестів (інтеграційного тестування).
 
-***k3s***:
+3. ***k3s***:
 
         Полегшена версія Kubernetes від Rancher (~100MB),
         проста у розгортанні. Підходить для вбудованих пристроїв, IoT, edge-розгортань,
         low-resource пристроях, а також для розробки.
 
-***k3d***:
+4. ***k3d***:
 
         Легкий wrapper над k3s, для запуску lightweight Kubernetes в Docker-контейнерах.
         Дуже швидкий і легкий для локального девелопменту, multi-node підтримка.
         Підходить для розробки і тестування.
 
-***k0s***:
+5. ***k0s***:
 
         Zero-friction Kubernetes дистрибутив від Mirantis.
         Все-в-одному, бінарник Kubernetes без зовнішніх залежностей.
         Працює без root-доступу. Оптимізований для хмар і edge.
 
 
-***MicroK8s***:
+6. ***MicroK8s***:
 
         lightweight Kubernetes від Canonical з підтримкою додаткових модулів (add-ons).
         Snap-пакет із ядром Kubernetes від Canonical, простий в установці.
         Працює як одиночний вузол, але може масштабуватись.
         Має ізоляцію, аддони, кластеризацію, працює навіть на Raspberry Pi.
 
-***Docker Desktop (з Kubernetes)***:
+7. ***Docker Desktop (з Kubernetes)***:
 
         Має опцію вбудованого Kubernetes. Проста активація, але споживає багато ресурсів.
         Працює на macOS та Windows.
 
-***Rancher Desktop***:
+8. ***Rancher Desktop***:
 
         Open-source альтернатива Docker Desktop, GUI-додаток для розробників.
         Підтримка Kubernetes (k3s), containerd/moby, nerdctl.
         Кросплатформений. Має простий інтерфейс і налаштування.
 
-***Vagrant + kubeadm***:
+9. ***Vagrant + kubeadm***:
 
         Ручне розгортання Kubernetes на віртуальних машинах через Vagrant.
         Гнучкий та схожий на продакшн, але складний у налаштуванні.
 
-***CRC (CodeReady Containers)***:
+10. ***CRC (CodeReady Containers)***:
 
         Локальний кластер OpenShift (на базі Kubernetes) від Red Hat. Підходить для ознайомлення з OpenShift.
         
