@@ -44,8 +44,9 @@
 
 ***MicroK8s***:
 
-        lightweight Kubernetes від Canonical з підтримкою додаткових модулів.
-
-
+        lightweight Kubernetes від Canonical з підтримкою додаткових модулів (add-ons).
+        Snap-пакет із ядром Kubernetes від Canonical, простий в установці.
+        Працює як одиночний вузол, але може масштабуватись.
+        Має ізоляцію, аддони, кластеризацію, працює навіть на Raspberry Pi.
 
 Rancher Desktop
