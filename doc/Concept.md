@@ -74,18 +74,19 @@
 
 |    |                   |                           | x86_64(amd64) | ARM64 (aarch64) | ARMv7 (32-bit ARM) |
 
-|    | Tool              | OS                        |       | Architecture |     |
-| -- | ----------------- | ------------------------- | ----- | ---------- | ----- |
-|    |                   |                           | amd64 | arm64      | armv7 |
-| 1  | Minikube          | Linux/macOS/Win           | Yes   | Yes(part.) | No    |
-| 2  | Kind              | Linux/macOS/Win           | Yes   | Yes        | No    | 
-| 3  | k3s               | Linux/macOS               | Yes   | Yes        | Yes   |
-| 4  | k3d               | Linux/macOS/Win           | Yes   | Yes        | No    |
-| 5  | k0s               | Linux/macOS/Win           | Yes   | Yes        | Yes   |
-| 6  | MicroK8s          | Linux/macOS/Win           | Yes   | Yes        | No    |
-| 7  | Docker Desktop    | Linux/macOS/Win           | Yes   | Yes(M1/M2  | No    |
-| 8  | Rancher Desktop   | Linux/macOS/Win           | Yes   | Yes        | No    |
-| 9  | Vagrant + kubeadm | Linux/macOS/Win           | Yes   | Yes        | No    |
-| 10 | CRC               | Linux/macOS/Win           | Yes   | No         | No    |
 
+|    | Tool              | OS                        |       | Architecture |     | Automation | Built-in applications |
+| -- | ----------------- | ------------------------- | ----- | ---------- | ----- | ---------- | --------------------- |
+|    |                   |                           | amd64 | arm64      | armv7 |            |  |
+| 1  | Minikube          | Linux/macOS/Win           | Yes   | Yes(part.) | No    |            |  |
+| 2  | Kind              | Linux/macOS/Win           | Yes   | Yes        | No    |            |  |
+| 3  | k3s               | Linux/macOS               | Yes   | Yes        | Yes   |            |  |
+| 4  | k3d               | Linux/macOS/Win           | Yes   | Yes        | No    |            |  |
+| 5  | k0s               | Linux/macOS/Win           | Yes   | Yes        | Yes   |            |  |
+| 6  | MicroK8s          | Linux/macOS/Win           | Yes   | Yes        | No    |            |  |
+| 7  | Docker Desktop    | Linux/macOS/Win           | Yes   | Yes(M1/M2  | No    |            |  |
+| 8  | Rancher Desktop   | Linux/macOS/Win           | Yes   | Yes        | No    |            |  |
+| 9  | Vagrant + kubeadm | Linux/macOS/Win           | Yes   | Yes        | No    |            |  |
+| 10 | CRC               | Linux/macOS/Win           | Yes   | No         | No    |            |  |
+ 
         
