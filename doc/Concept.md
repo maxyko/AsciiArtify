@@ -25,19 +25,19 @@
 
 3. ***k3s***:
 
-        Полегшена версія Kubernetes від Rancher (~100MB),
+        полегшена версія Kubernetes від Rancher (~100MB),
         проста у розгортанні. Підходить для вбудованих пристроїв, IoT, edge-розгортань,
         low-resource пристроях, а також для розробки.
 
 4. ***k3d***:
 
-        Легкий wrapper над k3s, для запуску lightweight Kubernetes в Docker-контейнерах.
+        легкий wrapper над k3s, для запуску lightweight Kubernetes в Docker-контейнерах.
         Дуже швидкий і легкий для локального девелопменту, multi-node підтримка.
         Підходить для розробки і тестування.
 
 5. ***k0s***:
 
-        Zero-friction Kubernetes дистрибутив від Mirantis.
+        zero-friction Kubernetes дистрибутив від Mirantis.
         Все-в-одному, бінарник Kubernetes без зовнішніх залежностей.
         Працює без root-доступу. Оптимізований для хмар і edge.
 
@@ -51,21 +51,38 @@
 
 7. ***Docker Desktop (з Kubernetes)***:
 
-        Має опцію вбудованого Kubernetes. Проста активація, але споживає багато ресурсів.
+        має опцію вбудованого Kubernetes. Проста активація, але споживає багато ресурсів.
         Працює на macOS та Windows.
 
 8. ***Rancher Desktop***:
 
-        Open-source альтернатива Docker Desktop, GUI-додаток для розробників.
+        open-source альтернатива Docker Desktop, GUI-додаток для розробників.
         Підтримка Kubernetes (k3s), containerd/moby, nerdctl.
         Кросплатформений. Має простий інтерфейс і налаштування.
 
 9. ***Vagrant + kubeadm***:
 
-        Ручне розгортання Kubernetes на віртуальних машинах через Vagrant.
+        ручне розгортання Kubernetes на віртуальних машинах через Vagrant.
         Гнучкий та схожий на продакшн, але складний у налаштуванні.
 
 10. ***CRC (CodeReady Containers)***:
 
-        Локальний кластер OpenShift (на базі Kubernetes) від Red Hat. Підходить для ознайомлення з OpenShift.
+        локальний кластер OpenShift (на базі Kubernetes) від Red Hat. Підходить для ознайомлення з OpenShift.
+
+### Характеристики
+#### Порівняльна таблиця характеристик
+
+|    | Tool              |     |     |
+| -- | ----------------- | --- | --- |
+| 1  | Minikube          |     |     |
+| 2  | Kind              |     |     |
+| 3  | k3s               |     |     |
+| 4  | k3d               |     |     |
+| 5  | k0s               |     |     |
+| 6  | MicroK8s          |     |     |
+| 7  | Docker Desktop    |     |     |
+| 8  | Rancher Desktop   |     |     |
+| 9  | Vagrant + kubeadm |     |
+| 10 | CRC               |     |     |
+
         
