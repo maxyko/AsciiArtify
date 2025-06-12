@@ -237,6 +237,8 @@ k3d cluster create hello-cluster
 3. Деплой
 ```
 kubectl apply -f hello-deploy.yaml
+```
+```
 kubectl apply -f  hello-service.yaml
 ```
 **hello-deploy.yaml**
@@ -279,3 +281,15 @@ spec:
       port: 80
       targetPort: 5678
 ```
+
+4. Port-forwaring
+```
+kubectl port-forward svc/hello-service 8080:80 &
+```
+
+5. Перевірка
+```
+curl 127.0.0.1:8080
+```
+
+
