@@ -223,6 +223,8 @@
 Він ідеально підходить для PoC стартапу AsciiArtify, де важлива швидкість, легкість та простота автоматизації.
 За потреби можна інтегрувати його у CI/CD pipeline або легко перенести розгортання у повноцінне хмарне середовище.
 
+
+# hello-deploy.yaml
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -245,4 +247,20 @@ spec:
         - "-text=Hello, World!"
         ports:
         - containerPort: 5678
+```
+
+# hello-service.yaml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: hello
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5678
 ```
