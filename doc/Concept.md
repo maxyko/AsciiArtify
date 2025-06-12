@@ -224,8 +224,22 @@
 Він ідеально підходить для PoC стартапу AsciiArtify, де важлива швидкість, легкість та простота автоматизації.
 За потреби можна інтегрувати його у CI/CD pipeline або легко перенести розгортання у повноцінне хмарне середовище.
 
+1. Встановлення ***k3d***
+```
+curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
+```
 
-# hello-deploy.yaml
+2. Створення кластеру
+```
+k3d cluster create hello-cluster
+```
+
+3. Деплой
+```
+kubectl apply -f hello-deploy.yaml
+kubectl apply -f  hello-service.yaml
+```
+**hello-deploy.yaml**
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -250,7 +264,7 @@ spec:
         - containerPort: 5678
 ```
 
-# hello-service.yaml
+**hello-service.yaml**
 ```
 apiVersion: v1
 kind: Service
