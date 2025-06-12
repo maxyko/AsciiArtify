@@ -216,3 +216,33 @@
     - Високі системні вимоги
     - Тільки для ознайомлення, не продакшн
 
+
+## Демонстрація:
+
+Рекомендований вибір: ***k3d***
+Він ідеально підходить для PoC стартапу AsciiArtify, де важлива швидкість, легкість та простота автоматизації.
+За потреби можна інтегрувати його у CI/CD pipeline або легко перенести розгортання у повноцінне хмарне середовище.
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: hello-container
+        image: hashicorp/http-echo
+        args:
+        - "-text=Hello, World!"
+        ports:
+        - containerPort: 5678
+```
