@@ -257,7 +257,7 @@ kind: Service
 metadata:
   name: hello-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: hello
   ports:
