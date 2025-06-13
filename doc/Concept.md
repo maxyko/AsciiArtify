@@ -295,6 +295,30 @@ curl 127.0.0.1:8080
 kubectl logs -f $(kubectl get pods -l app=hello -o name)
 ```
 
+6. Видалити кластер
+```
+k3d cluster delete hello-cluster
+```
+
+### Додаток
+
+#### Minikube
+```
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x minikube && sudo mv minikube /usr/local/bin
+minikube start
+...
+minikube delete
+```
+
+#### Kind
+```
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.23.0/kind-linux-amd64
+chmod +x kind && sudo mv kind /usr/local/bin
+kind create cluster --name asciiartify
+...
+kind delete cluster --name asciiartify
+```
 
 ## Висновки:
 
