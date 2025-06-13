@@ -74,17 +74,17 @@
 
 
 |  |Tool             |OS             |Architecture amd64/arm64/armv7|Automation CI/CD|Built-in applications       |need Docker                                            |Podman support|Usability |Production ready  |
-|--|-----------------|---------------|------------------------------|----------------|----------------------------|-------------------------------------------------------|---|----------|------------------|
-|1 |Minikube         |Linux/macOS/Win|Yes/Yes(lim.)/No              |Limited         |Yes(Ingress, Dashboard)     |❌ Підтримує Docker,Podman,VirtualBox,KVM,HyperKit,etc.|✅ Працює  з  '--driver=podman'. Деякі аддони можуть працювати нестабільно.|⭐⭐⭐⭐☆ |No                |
-|2 |Kind             |Linux/macOS/Win|Yes/Yes/No                    |Yes             |No                          |✅ Потрібен Docker або Podman як backend (з певними обмеженнями)|⭐⭐⭐☆☆  |No                |
-|3 |k3s              |Linux/macOS    |Yes/Yes/Yes                   |Yes             |Yes(Traefik, Helm CRD)      |❌ Має вбудований containerd, Docker не потрібен|⭐⭐⭐⭐☆ |Yes(edge)         |
-|4 |k3d              |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Traefik, opt. UI)       |✅ Працює виключно з Docker, бо запускає k3s у контейнерах|⭐⭐⭐⭐⭐|No(only dev/test) |
-|5 |k0s              |Linux/macOS/Win|Yes/Yes/Yes                   |Yes             |No                          |❌ Має вбудований containerd, працює без Docker|⭐⭐⭐☆☆  |Yes               |
-|6 |MicroK8s         |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress,Dashboard,Istio)|❌ Вбудований containerd, Docker не потрібен|⭐⭐⭐⭐☆ |Yes               |
-|7 |Docker Desktop   |Linux/macOS/Win|Yes/Yes(M1/M2)/No             |Limited         |Yes(Dashboard)              |✅ Має Docker + Kubernetes. Інше не підтримується|⭐⭐⭐⭐☆ |No                |
-|8 |Rancher Desktop  |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress)                |❌ Має вбудований containerd або може працювати з nerdctl (Docker CLI-альтернатива)|⭐⭐⭐⭐☆ |No                |
-|9 |Vagrant + kubeadm|Linux/macOS/Win|Yes/Yes/No                    |Yes             |N/A                         |❌ Використовує внутрішній CRI (можна встановити Docker, containerd або CRI-O вручну)|⭐⭐☆☆☆   |Yes               |
-|10|CRC              |Linux/macOS/Win|Yes/No/No                     |Limited         |Yes(Web UI,Ingress)         |❌ Вбудований CRI-O. Docker заборонено в OpenShift за замовчуванням||⭐⭐☆☆☆   |Limited(only eval)|
+|--|-----------------|---------------|------------------------------|----------------|----------------------------|------------------------------------------------------------------|---|----------|------------------|
+|1 |Minikube         |Linux/macOS/Win|Yes/Yes(lim.)/No              |Limited         |Yes(Ingress, Dashboard)     |❌ Підтримує Docker,Podman,VirtualBox,KVM,HyperKit,etc.         |✅ Працює  з  '--driver=podman'. Деякі аддони можуть працювати нестабільно.|⭐⭐⭐⭐☆ |No                |
+|2 |Kind             |Linux/macOS/Win|Yes/Yes/No                    |Yes             |No                          |✅ Потрібен Docker або Podman як backend (з певними обмеженнями)|⚠️ Частково   Може працювати з rootful Podman, але не стабільно; rootless – не підтримується.|⭐⭐⭐☆☆  |No                |
+|3 |k3s              |Linux/macOS    |Yes/Yes/Yes                   |Yes             |Yes(Traefik, Helm CRD)      |❌ Має вбудований containerd, Docker не потрібен                |✅ Працює з будь-яким CRI. Для створення контейнерів можна використовувати Podman окремо.|⭐⭐⭐⭐☆ |Yes(edge)         |
+|4 |k3d              |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Traefik, opt. UI)       |✅ Працює виключно з Docker, бо запускає k3s у контейнерах      |❌ Ні. Використовує Docker socket API напряму — Podman не сумісний. |⭐⭐⭐⭐⭐|No(only dev/test) |
+|5 |k0s              |Linux/macOS/Win|Yes/Yes/Yes                   |Yes             |No                          |❌ Має вбудований containerd, працює без Docker                 |✅ Контейнери створюються через вбудований containerd. Podman не потрібен, але сумісний з образом.|⭐⭐⭐☆☆  |Yes               |
+|6 |MicroK8s         |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress,Dashboard,Istio)|❌ Вбудований containerd, Docker не потрібен                    |✅ Має власний containerd. Podman можна використовувати для побудови образів.|⭐⭐⭐⭐☆ |Yes               |
+|7 |Docker Desktop   |Linux/macOS/Win|Yes/Yes(M1/M2)/No             |Limited         |Yes(Dashboard)              |✅ Має Docker + Kubernetes. Інше не підтримується               |❌ Це і є Docker. Podman не релевантний.|⭐⭐⭐⭐☆ |No                |
+|8 |Rancher Desktop  |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress)                |❌ Має вбудований containerd або може працювати з nerdctl (Docker CLI-альтернатива)|✅ (опосередковано) Має підтримку nerdctl, який може замінити Docker CLI. Можна налаштувати на Podman, але складно.|⭐⭐⭐⭐☆ |No                |
+|9 |Vagrant + kubeadm|Linux/macOS/Win|Yes/Yes/No                    |Yes             |N/A                         |❌ Використовує внутрішній CRI (можна встановити Docker, containerd або CRI-O вручну)|✅ Залежить від того, який CRI ти ставиш всередині (можна використовувати Podman).|⭐⭐☆☆☆   |Yes               |
+|10|CRC              |Linux/macOS/Win|Yes/No/No                     |Limited         |Yes(Web UI,Ingress)         |❌ Вбудований CRI-O. Docker заборонено в OpenShift за замовчуванням|✅ (опосередковано) Використовує CRI-O. Образи можна створювати з Podman. Працює добре.|⭐⭐☆☆☆   |Limited(only eval)|
 
 
 ## Переваги та недоліки:
