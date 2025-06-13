@@ -73,18 +73,18 @@
 ### Порівняльна таблиця характеристик
 
 
-|  |Tool             |OS             |Architecture amd64/arm64/armv7|Automation CI/CD|Built-in applications       |Usability |Production ready  |
-|--|-----------------|---------------|------------------------------|----------------|----------------------------|----------|------------------|
-|1 |Minikube         |Linux/macOS/Win|Yes/Yes(lim.)/No              |Limited         |Yes(Ingress, Dashboard)     |⭐⭐⭐⭐☆ |No                |
-|2 |Kind             |Linux/macOS/Win|Yes/Yes/No                    |Yes             |No                          |⭐⭐⭐☆☆  |No                |
-|3 |k3s              |Linux/macOS    |Yes/Yes/Yes                   |Yes             |Yes(Traefik, Helm CRD)      |⭐⭐⭐⭐☆ |Yes(edge)         |
-|4 |k3d              |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Traefik, opt. UI)       |⭐⭐⭐⭐⭐|No(only dev/test) |
-|5 |k0s              |Linux/macOS/Win|Yes/Yes/Yes                   |Yes             |No                          |⭐⭐⭐☆☆  |Yes               |
-|6 |MicroK8s         |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress,Dashboard,Istio)|⭐⭐⭐⭐☆ |Yes               |
-|7 |Docker Desktop   |Linux/macOS/Win|Yes/Yes(M1/M2)/No             |Limited         |Yes(Dashboard)              |⭐⭐⭐⭐☆ |No                |
-|8 |Rancher Desktop  |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress)                |⭐⭐⭐⭐☆ |No                |
-|9 |Vagrant + kubeadm|Linux/macOS/Win|Yes/Yes/No                    |Yes             |N/A                         |⭐⭐☆☆☆   |Yes               |
-|10|CRC              |Linux/macOS/Win|Yes/No/No                     |Limited         |Yes(Web UI,Ingress)         |⭐⭐☆☆☆   |Limited(only eval)|
+|  |Tool             |OS             |Architecture amd64/arm64/armv7|Automation CI/CD|Built-in applications       |need Docker                                            |Podman support|Usability |Production ready  |
+|--|-----------------|---------------|------------------------------|----------------|----------------------------|-------------------------------------------------------|---|----------|------------------|
+|1 |Minikube         |Linux/macOS/Win|Yes/Yes(lim.)/No              |Limited         |Yes(Ingress, Dashboard)     |❌ Підтримує Docker,Podman,VirtualBox,KVM,HyperKit,etc.|✅ Працює  з  '--driver=podman'. Деякі аддони можуть працювати нестабільно.|⭐⭐⭐⭐☆ |No                |
+|2 |Kind             |Linux/macOS/Win|Yes/Yes/No                    |Yes             |No                          |✅ Потрібен Docker або Podman як backend (з певними обмеженнями)|⭐⭐⭐☆☆  |No                |
+|3 |k3s              |Linux/macOS    |Yes/Yes/Yes                   |Yes             |Yes(Traefik, Helm CRD)      |❌ Має вбудований containerd, Docker не потрібен|⭐⭐⭐⭐☆ |Yes(edge)         |
+|4 |k3d              |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Traefik, opt. UI)       |✅ Працює виключно з Docker, бо запускає k3s у контейнерах|⭐⭐⭐⭐⭐|No(only dev/test) |
+|5 |k0s              |Linux/macOS/Win|Yes/Yes/Yes                   |Yes             |No                          |❌ Має вбудований containerd, працює без Docker|⭐⭐⭐☆☆  |Yes               |
+|6 |MicroK8s         |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress,Dashboard,Istio)|❌ Вбудований containerd, Docker не потрібен|⭐⭐⭐⭐☆ |Yes               |
+|7 |Docker Desktop   |Linux/macOS/Win|Yes/Yes(M1/M2)/No             |Limited         |Yes(Dashboard)              |✅ Має Docker + Kubernetes. Інше не підтримується|⭐⭐⭐⭐☆ |No                |
+|8 |Rancher Desktop  |Linux/macOS/Win|Yes/Yes/No                    |Yes             |Yes(Ingress)                |❌ Має вбудований containerd або може працювати з nerdctl (Docker CLI-альтернатива)|⭐⭐⭐⭐☆ |No                |
+|9 |Vagrant + kubeadm|Linux/macOS/Win|Yes/Yes/No                    |Yes             |N/A                         |❌ Використовує внутрішній CRI (можна встановити Docker, containerd або CRI-O вручну)|⭐⭐☆☆☆   |Yes               |
+|10|CRC              |Linux/macOS/Win|Yes/No/No                     |Limited         |Yes(Web UI,Ingress)         |❌ Вбудований CRI-O. Docker заборонено в OpenShift за замовчуванням||⭐⭐☆☆☆   |Limited(only eval)|
 
 
 ## Переваги та недоліки:
@@ -321,4 +321,20 @@ PoC у стартапі зазвичай:
 | **k0s**               | ⭐⭐☆☆☆              | Потужний, але потребує ручного налаштування. Підійде для PoC, що ближче до edge або продакшн.                              |
 | **Vagrant + kubeadm** | ⭐☆☆☆☆              | Максимальний контроль, але складно і повільно. Не рекомендується для стартапів, хіба що для навчання DevOps.               |
 | **CRC (OpenShift)**   | ⭐☆☆☆☆              | Дуже важкий. Варто використовувати лише якщо ціль — OpenShift. Для звичайного PoC — ні.                                    |
+
+
+
+
+| Інструмент          | Потребує Docker? | Альтернатива / Пояснення                                                           |
+| ------------------- | ---------------- | ---------------------------------------------------------------------------------- |
+| **k3d**             | ✅                | Працює **виключно** з Docker, бо запускає k3s у контейнерах                        |
+| **Kind**            | ✅                | Потрібен Docker або Podman як backend (з певними обмеженнями)                      |
+| **Minikube**        | ❌                | Підтримує Docker, Podman, VirtualBox, KVM, HyperKit, etc.                          |
+| **k3s**             | ❌                | Має вбудований `containerd`, Docker **не потрібен**                                |
+| **k0s**             | ❌                | Має вбудований `containerd`, працює без Docker                                     |
+| **MicroK8s**        | ❌                | Вбудований `containerd`, Docker не потрібен                                        |
+| **Docker Desktop**  | ✅                | Має Docker + Kubernetes. Інше не підтримується                                     |
+| **Rancher Desktop** | ❌                | Має вбудований `containerd` або може працювати з nerdctl (Docker CLI-альтернатива) |
+| **Vagrant+kubeadm** | ❌                | Використовує внутрішній CRI (можна встановити Docker, containerd або CRI-O вручну) |
+| **CRC (OpenShift)** | ❌                | Вбудований CRI-O. Docker **заборонено** в OpenShift за замовчуванням               |
 
