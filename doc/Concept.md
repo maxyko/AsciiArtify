@@ -224,6 +224,8 @@
 Він ідеально підходить для PoC стартапу AsciiArtify, де важлива швидкість, легкість та простота автоматизації.
 За потреби можна інтегрувати його у CI/CD pipeline або легко перенести розгортання у повноцінне хмарне середовище.
 
+![Image](.data/week4_task4.gif)
+
 1. Встановлення ***k3d***
 ```
 curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
