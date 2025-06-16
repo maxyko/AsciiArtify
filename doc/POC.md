@@ -1,7 +1,16 @@
 # ArgoCD
 
 ## Prerequisites
-Having locally deployed K8s cluster.
+- Having locally deployed K8s cluster. In our case ***k3d*** tool can be used for running local K8s(k3s) cluster:
+[k3d demo](https://github.com/maxyko/AsciiArtify/blob/main/doc/Concept.md#%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D1%81%D1%82%D1%80%D0%B0%D1%86%D1%96%D1%8F)
+- Create a cluster:
+  ```
+  k3d cluster create argo
+  ```
+  Check cluster context:
+  ```
+  kubectl config current-context
+  ```
 
 ## To install ArgoCD in your K8s cluster:
 
