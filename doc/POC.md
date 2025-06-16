@@ -1,5 +1,8 @@
 # ArgoCD
 
+## Prerequisites
+Having locally deployed K8s cluster.
+
 ## To install ArgoCD in your K8s cluster:
 
 - #### Create a namespace for ArgoCD:
