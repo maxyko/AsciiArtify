@@ -59,3 +59,9 @@ Username/Password:
 Username: admin
 Password: <get_passwd_see_above>
 ```
+
+
+# Demo
+
+## Terminal part
+
