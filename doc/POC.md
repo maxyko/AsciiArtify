@@ -44,6 +44,10 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443 &
 ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
+Secure way to get the password in a clipboard using ***pbcopy*** utility:
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d | pbcopy
+```
 
 - ### Use a web browser to get ArgoCD Web UI:
 ***Url*** (accept using of a self-signed certificate):
