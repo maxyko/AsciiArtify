@@ -14,6 +14,8 @@
 
 ## To install ArgoCD in your K8s cluster:
 
+![week4_task5_1](../.data/week4_task5_1.gif)
+
 - #### Create a namespace for ArgoCD:
 ```
 kubectl create namespace argocd
