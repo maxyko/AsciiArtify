@@ -37,6 +37,8 @@ kubectl get po -n argocd -w
 
 ## To get access to ArgoCD Web UI:
 
+![week4_task5_2](../.data/week4_task5_2.gif)
+
 - ### Use ***port-forward*** to forward local ports to ArgoCD svc/pod:
 ```
 kubectl port-forward svc/argocd-server -n argocd 8080:443 &
