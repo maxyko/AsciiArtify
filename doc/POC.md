@@ -54,6 +54,9 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ```
 
 - ### Use a web browser to get ArgoCD Web UI:
+
+![week4_task5_3](../.data/week4_task5_3.gif)
+
 ***Url*** (accept using of a self-signed certificate):
 ```
 https://127.0.0.1:8080
