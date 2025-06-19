@@ -47,7 +47,7 @@
 
 ![week4_task-last_5](../.data/week4_task-last_5.png "week4_task-last_5")
 
-6. Click on ***demo*** application to see :
+6. Click on ***demo*** application to see ***SYNC/LAST SYNC*** status:
 
 ![week4_task-last_6](../.data/week4_task-last_6.png "week4_task-last_6")
 
