@@ -35,6 +35,14 @@
 
 ![week4_task-last_3](../.data/week4_task-last_3.png "week4_task-last_3")
 
+4. Set these fields in ***DESTINATION*** block:
+
+    ***Cluster URL***  --> https://kubernetes.default.svc
+   
+    ***Project Name*** --> demo
+
+![week4_task-last_4](../.data/week4_task-last_4.png "week4_task-last_4")
+
 
   
     
