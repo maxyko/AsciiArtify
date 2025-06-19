@@ -9,9 +9,20 @@
 ![week4_task-last_1](../.data/week4_task-last_1.png "week4_task-last_1")
 
 2. Set these fields:
+
     ***Application Name*** --> demo
+   
     ***Project Name***     --> default
+   
     ***SYNC POLICY***      --> Automatic
-        ***PRUNE RESOURCES*** checkbox --> [V]
-        ***SELF HEAL***       checkbox --> [V]
+
+    ***PRUNE RESOURCES*** checkbox --> ✅
+
+    ***SELF HEAL***       checkbox --> ✅
+
+
+![week4_task-last_2](../.data/week4_task-last_2.png "week4_task-last_2")
+
+
+  
     
