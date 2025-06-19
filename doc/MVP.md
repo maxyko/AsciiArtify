@@ -8,7 +8,7 @@
 
 ![week4_task-last_1](../.data/week4_task-last_1.png "week4_task-last_1")
 
-2. Set these fields:
+2. Set these fields in ***GENERAL*** block:
 
     ***Application Name*** --> demo
    
