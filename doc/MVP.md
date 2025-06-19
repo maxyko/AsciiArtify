@@ -4,4 +4,7 @@
 
 ![week4_task-last](../.data/week4_task-last.gif)
 
-1. Log into ArgoCD WebUI and click on ***New App** (or ***Create Application***):
+1. Log into ArgoCD WebUI and click on ***New App*** (or ***Create Application***):
+
+![week4_task-last_1](../.data/week4_task-last_1.png "week4_task-last_1")
+
