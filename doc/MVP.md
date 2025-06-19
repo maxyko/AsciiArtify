@@ -47,11 +47,16 @@
 
 ![week4_task-last_5](../.data/week4_task-last_5.png "week4_task-last_5")
 
-6. Click on ***demo*** application to see ***SYNC/LAST SYNC*** status:
+6. Click on ***demo*** application to see/check ***LAST SYNC/SYNC/APP HEALTH*** statuses:
 
 ![week4_task-last_6](../.data/week4_task-last_6.png "week4_task-last_6")
 
 ![week4_task-last_7](../.data/week4_task-last_7.png "week4_task-last_7")
+
+![week4_task-last_8](../.data/week4_task-last_8.png "week4_task-last_8")
+
+
+
 
 
 
