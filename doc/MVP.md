@@ -47,13 +47,20 @@
 
 ![week4_task-last_5](../.data/week4_task-last_5.png "week4_task-last_5")
 
-6. Click on ***demo*** application to see/check ***LAST SYNC/SYNC/APP HEALTH*** statuses:
+6. Click on ***demo*** application to see/check ***LAST SYNC/SYNC/APP HEALTH*** statuses - wait till they get ***green*** status:
 
 ![week4_task-last_6](../.data/week4_task-last_6.png "week4_task-last_6")
 
 ![week4_task-last_7](../.data/week4_task-last_7.png "week4_task-last_7")
 
 ![week4_task-last_8](../.data/week4_task-last_8.png "week4_task-last_8")
+
+7. To test ArgoCD App with automatic synchronization, click for examply on ***ambassador*** service
+
+![week4_task-last_9](../.data/week4_task-last_9.png "week4_task-last_9")
+
+![week4_task-last_10](../.data/week4_task-last_10.png "week4_task-last_10")
+
 
 
 
