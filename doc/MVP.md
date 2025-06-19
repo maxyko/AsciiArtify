@@ -55,11 +55,18 @@
 
 ![week4_task-last_8](../.data/week4_task-last_8.png "week4_task-last_8")
 
-7. To test ArgoCD App with automatic synchronization, click for examply on ***ambassador*** service
+7. To test ArgoCD App with automatic synchronization, click for examply on ***ambassador*** service:
 
 ![week4_task-last_9](../.data/week4_task-last_9.png "week4_task-last_9")
 
 ![week4_task-last_10](../.data/week4_task-last_10.png "week4_task-last_10")
+
+and scroll down till the ***LIVE MANIFEST***:
+
+![week4_task-last_11](../.data/week4_task-last_11.png "week4_task-last_11")
+
+
+
 
 
 
