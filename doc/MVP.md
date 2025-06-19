@@ -20,6 +20,8 @@
 
     ***SELF HEAL***       checkbox --> ✅
 
+    ***AUTO-CREATE NAMESPACE       -->  ✅
+
 
 ![week4_task-last_2](../.data/week4_task-last_2.png "week4_task-last_2")
 
