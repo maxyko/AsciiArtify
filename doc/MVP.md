@@ -20,10 +20,20 @@
 
     ***SELF HEAL***       checkbox --> ✅
 
-    ***AUTO-CREATE NAMESPACE       -->  ✅
+    ***AUTO-CREATE NAMESPACE      -->  ✅
 
 
 ![week4_task-last_2](../.data/week4_task-last_2.png "week4_task-last_2")
+
+3. Set these fields in ***SOURCE*** block:
+
+    ***Repository URL*** --> https://github.com/den-vasyliev/go-demo-app
+   
+    ***Revision***       --> HEAD
+
+    ***Path***           --> helm
+
+![week4_task-last_3](../.data/week4_task-last_3.png "week4_task-last_3")
 
 
   
