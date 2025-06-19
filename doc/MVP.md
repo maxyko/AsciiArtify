@@ -65,6 +65,15 @@ and scroll down till the ***LIVE MANIFEST***:
 
 ![week4_task-last_11](../.data/week4_task-last_11.png "week4_task-last_11")
 
+8. Click on ***EDIT***
+
+![week4_task-last_12](../.data/week4_task-last_12.png "week4_task-last_12")
+
+![week4_task-last_13](../.data/week4_task-last_13.png "week4_task-last_13")
+
+![week4_task-last_14](../.data/week4_task-last_14.png "week4_task-last_14")
+
+![week4_task-last_15](../.data/week4_task-last_15.png "week4_task-last_15")
 
 
 
