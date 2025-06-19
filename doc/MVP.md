@@ -43,9 +43,17 @@
 
 ![week4_task-last_4](../.data/week4_task-last_4.png "week4_task-last_4")
 
-5. Click on ***CREATE*** button --> ***demo*** application will be crated and ***sync*** process will be started automatically:
+5. Click on ***CREATE*** button --> ***demo*** application will be created and ***sync*** process will be started automatically:
 
 ![week4_task-last_5](../.data/week4_task-last_5.png "week4_task-last_5")
+
+6. Click on ***demo*** application to see :
+
+![week4_task-last_6](../.data/week4_task-last_6.png "week4_task-last_6")
+
+![week4_task-last_7](../.data/week4_task-last_7.png "week4_task-last_7")
+
+
 
 
   
