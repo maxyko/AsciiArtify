@@ -1,6 +1,6 @@
 # MVP: ArgoCD App creation
 
-### How to create ArgoCD App with automatic synchronization
+## How to create ArgoCD App with automatic synchronization
 
 ![week4_task-last](../.data/week4_task-last.gif)
 
@@ -76,6 +76,36 @@ and scroll down till the ***LIVE MANIFEST***:
 ![week4_task-last_14](../.data/week4_task-last_14.png "week4_task-last_14")
 
 ![week4_task-last_15](../.data/week4_task-last_15.png "week4_task-last_15")
+
+
+## Test run of ArgoCD Demo Application:
+
+![week4_task-last_2](../.data/week4_task-last_2.gif)
+
+Use ***port-forward*** to forward local port ***8088*** to ArgoCD Application port ***80*** :
+```
+kubectl port-forward -n demo svc/ambassador 8088:80 &
+```
+
+Download some test image:
+```
+wget -O ./g.png  https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
+```
+
+Send test image using ***curl** utility to an application endpoint:
+```
+$ curl -F 'image=@g.png' localhost:8088/img/
+
+Handling connection for 8088
+  .;1tttt1i.                               ;:
+ if1:....:i.                              .1;
+iL;             ,;;;:    .;ii;,    :ii;:;, 1;  ,;;:,
+ff.   .1tt11:. 11:::11, if1::if1 .tf;:;tL1 1; i1::;t1.
+;Li       .tL.it     t1,Li    ;L,,L.    fi 1:.t;:;;:,.
+ ;fti:,,,;tf: :ti,.,;t:.tf;,,:ff..ft:,,iLi 1; 1t;,.::
+   :i1111i:    .;iii;,   :1111;.  .;11i;L1 ;, .:;iii:
+                                 .11,,,1L:
+```
 
 
 
