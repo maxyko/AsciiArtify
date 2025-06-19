@@ -65,11 +65,13 @@ and scroll down till the ***LIVE MANIFEST***:
 
 ![week4_task-last_11](../.data/week4_task-last_11.png "week4_task-last_11")
 
-8. Click on ***EDIT***
+8. Click on ***EDIT*** and change for example service type from ***NodePort*** --> ***LoadBalancer*** ; click on ***SAVE*** button and close the window:
 
 ![week4_task-last_12](../.data/week4_task-last_12.png "week4_task-last_12")
 
 ![week4_task-last_13](../.data/week4_task-last_13.png "week4_task-last_13")
+
+9. Now you can see that after such changes automatic synchronization process was started and ArgoCD tries to get a state equal to the state described in a source repo:
 
 ![week4_task-last_14](../.data/week4_task-last_14.png "week4_task-last_14")
 
