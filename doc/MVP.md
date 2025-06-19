@@ -78,7 +78,7 @@ and scroll down till the ***LIVE MANIFEST***:
 ![week4_task-last_15](../.data/week4_task-last_15.png "week4_task-last_15")
 
 
-## Test run of ArgoCD Demo Application:
+## Check Application deployed by ArgoCD:
 
 ![week4_task-last_2](../.data/week4_task-last_2.gif)
 
