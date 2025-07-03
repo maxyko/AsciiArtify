@@ -1,0 +1,38 @@
+#!/bin/bash
+
+
+RESOURCE_TYPE=$1
+ARG=""
+NAMESPACE="N/A"
+STRING="Resource,Namespace,Name,CPU,Memory\n"
+
+if [[ "$RESOURCE_TYPE" == "pod" && -n $2 ]]; then
+  ARG="-n $2"
+  NAMESPACE=$2
+elif [[ "$RESOURCE_TYPE" == "pod" && -z $2 ]]; then
+  NAMESPACE="default"
+elif [[ "$RESOURCE_TYPE" == "node" && -n $2 ]]; then
+  ARG=$2
+fi
+
+QBCTL_OUTPUT=$(kubectl top $RESOURCE_TYPE $ARG | tail -n +2)
+
+
+while read -r line
+do
+  
+  NAME=$(echo $line | awk '{print $1}')
+  CPU=$(echo $line | awk '{print $2}')
+
+  if [ "$RESOURCE_TYPE" == "pod" ]; then
+    MEMORY=$(echo $line | awk '{print $3}')   
+  elif [ "$RESOURCE_TYPE" == "node" ]; then
+    MEMORY=$(echo $line | awk '{print $4}')
+  fi
+
+  STRING+="$RESOURCE_TYPE,$NAMESPACE,$NAME,$CPU,$MEMORY\n"
+
+done <<< "$QBCTL_OUTPUT"
+
+# Output the statistics to the console
+echo -e "$STRING" | column -t -s ","
